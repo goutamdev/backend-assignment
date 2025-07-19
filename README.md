@@ -81,13 +81,6 @@ Then open:
 
 ---
 
-## 📤 Submission
-
-- Upload this project to a **public GitHub repository**
-- Submit the GitHub repo link as per assignment instructions
-
----
-
 ## 📄 License
 
 This project is open-source and created for educational purposes.
