@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body onload="notifyGet()">
+  <div class="container">
+    <h1>Signup Page</h1>
+    <nav>
+      <a href="home.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="signup.html">Signup</a>
+    </nav>
+    <form onsubmit="submitSignup(event)">
+      <input type="text" placeholder="Username" required><br><br>
+      <input type="email" placeholder="Email" required><br><br>
+      <input type="password" placeholder="Password" required><br><br>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p id="response"></p>
+  </div>
+  <script>
+    async function notifyGet() {
+      await fetch('/api/message');
+    }
+    async function submitSignup(e) {
+      e.preventDefault();
+      const res = await fetch('/api/message', { method: 'POST' });
+      const msg = await res.text();
+      document.getElementById('response').innerText = msg;
+    }
+  </script>
+</body>
+</html>
