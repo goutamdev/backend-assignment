@@ -67,8 +67,8 @@ Then open:
 
 ## 📬 Output Preview
 
-- On page load → Console/terminal shows: **GET request received.**
-- On form submit → Console/terminal shows: **POST request received.**
+- On page load → Console/terminal shows: **I am get request.**
+- On form submit → Console/terminal shows: **I am post request.**
 
 ---
 
